@@ -4,7 +4,7 @@
   "description": "product catalogue REST API",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"this test doing by developers"
+    "test": "echo \"this test doing by developers\" "
   },
   "author": "SteveW",
   "license": "Apache-2.0",
