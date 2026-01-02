@@ -39,6 +39,16 @@ pipeline {
                 }
             }
         }
+
+        stage('Unit Test') {
+            steps {
+                script {
+                    sh  """
+                        npm test
+                    """
+                }
+            }
+        }
         stage('Build Image') {
             steps {
                 script {
@@ -50,7 +60,6 @@ pipeline {
                             docker push ${ACC_ID}.dkr.ecr.us-east-1.amazonaws.com/${PROJECT}/${COMPONENT}:${appVersion}
                         """
                     }
-
                 }
             }
         }
